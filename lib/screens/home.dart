@@ -17,13 +17,13 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     int _currentIndex = 0;
 
-    _onTapped(index) {
-      setState(() {
-        _currentIndex = index;
-      });
-    }
+    // _onTapped(index) {
+    //   setState(() {
+    //     _currentIndex = index;
+    //   });
+    // }
 
-    const screens = [
+    List<Widget> screens = [
       HomePage(),
       FeedPage(),
       ChatPage(),
@@ -74,7 +74,7 @@ class _MainPageState extends State<MainPage> {
           onTap: (int index) => setState(() {
                 _currentIndex = index;
               }),
-          items: <BottomNavigationBarItem>[
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
